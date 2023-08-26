@@ -1,0 +1,166 @@
+.hero {
+    @include container;
+    @include flex(flex-start, center, column);
+    position: relative;
+
+    &__title {
+        font-size: 64px;
+        color: #e2e2e2;
+        font-family: "nunito exb";
+        width: 890px;
+        text-align: center;
+        margin: 43px auto;
+        animation-name: hero__title-anim;
+        animation-duration: 1s;
+    }
+
+    &__title span:nth-child(1) {
+        color: #00dcfe;
+        font-family: "nunito exb";
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-family: 'nunito l';
+        color: #e2e2e2;
+        margin: 20px auto;
+        width: 890px;
+        text-align: center;
+        animation-name: hero__subtitle-anim;
+        animation-delay: 1s;
+        animation-duration: 1s;
+        animation-fill-mode: backwards;
+    }
+
+    &__btn {
+        margin: 20px auto;
+        font-size: 16px;
+        @include btn;
+        cursor: pointer;
+        background-color: #f0f0f0;
+        animation-name: hero__btn-anim;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+        animation-duration: 1s;
+    }
+
+    &__img {
+        background-image: url(../img/hero-img.jpg);
+        background-size: 100% 100%;
+        width: 739px;
+        height: 501px;
+        margin-top: 100px;
+        border-radius: 50px;
+        position: relative;
+        animation-name: hero__img-anim;
+        animation-delay: 3s;
+        animation-duration: 1s;
+        animation-fill-mode: backwards;
+        z-index: 2;
+
+        &-inner-left,
+        &-inner-right {
+            position: absolute;
+            @include flex(flex-start, center, column);
+            background-color: black;
+            color: #e2e2e2;
+            width: 200px;
+            text-align: center;
+            border-radius: 16px;
+        }
+
+        &-inner-left {
+            top: 290px;
+            left: -100px;
+        }
+
+        &-inner-right {
+            top: 290px;
+            right: -100px;
+        }
+
+        &-inner-left div:nth-child(2),
+        &-inner-right div:nth-child(2) {
+            width: 160px;
+            margin-bottom: 20px;
+            font-family: 'nunito reg';
+        }
+
+        &-inner-left div:nth-child(1),
+        &-inner-right div:nth-child(1) {
+            margin: 19px 0;
+            border-bottom: 2px solid #00dcfe;
+            width: 100%;
+            font-family: "nunito b";
+            font-size: 19px;
+        }
+    }
+
+    &__absolute {
+        &-circle {
+            width: 325px;
+            height: 325px;
+            border: 10px solid #00dcfe;
+            border-radius: 50%;
+            position: absolute;
+            top: -55px;
+            right: -240px;
+            filter: blur(10px);
+        }
+
+        &-gradient {
+            position: absolute;
+            background: linear-gradient(180deg,
+                    rgba(84, 84, 212, 0.308) 0%,
+                    rgba(84, 212, 201, 0.32) 100%);
+            transform: rotate(-54.374deg);
+            width: 467px;
+            height: 1234px;
+            filter: blur(150px);
+            top: -150px;
+            left: -190px;
+        }
+    }
+}
+
+
+
+@keyframes hero__title-anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hero__subtitle-anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hero__btn-anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hero__img-anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

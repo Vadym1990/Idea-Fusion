@@ -1,0 +1,58 @@
+.header {
+    width: 1240px;
+    margin: 72px auto;
+    color: white;
+    @include flex(space-between, center, row);
+
+    &__btn {
+        @include btn;
+        background-color: #0e0e0e;
+        color: #e2e2e2;
+        font-size: 16px;
+        animation-name: header__btn-anim;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.logo div:nth-child(1) {
+    color: #e2e2e2;
+    font-family: "nunito exb";
+}
+
+.logo div:nth-child(2) {
+    font-family: "nunito l";
+    letter-spacing: 4.6px
+}
+
+.menu {
+    @include flex;
+    gap: 0 50px;
+}
+
+.menu li:nth-child(n) {
+    transition: color .3s;
+}
+
+.menu li:nth-child(n):hover {
+    color: #00dcfe;
+    cursor: pointer;
+}
+
+.menu li:nth-child(n) {
+    font-family: "nunito l";
+}
+
+@keyframes header__btn-anim {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}

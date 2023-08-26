@@ -1,0 +1,24 @@
+@mixin flex($jc: flex-start, $ai: stretch, $fd: row) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+@mixin container($w: 1200px, $m: 0 auto) {
+    width: $w;
+    margin: $m;
+}
+
+@mixin btn {
+    font-family: 'nunito reg';
+    padding: 12px 50px;
+    border-radius: 44px;
+    border: 1px solid #e2e2e2;
+}
+
+@mixin proj-img {
+    border-radius: 30px;
+    display: flex;
+    align-items: end;
+}
