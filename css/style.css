@@ -634,6 +634,7 @@ li {
   margin: 0 auto;
   display: block;
   margin-top: 40px;
+  position: relative;
   z-index: 2;
 }
 .our-projects-btn:hover {
